@@ -96,8 +96,8 @@ public class Main {
         System.out.println("INT: Без приведения типа, с переполнением: " + (var5 + var6));
 
         float var7= Float.MAX_VALUE;
-        float var8 = 1.0F;
-        System.out.println("FLOAT: Автоматическое приведение типа ТУТ ФЕЙЛ, НАДО ПЕРЕДЕЛАЕТЬ, без переполнения: " + (var7 + var8));
+        float var8 = 340282346638528859811704183484516925.22F;
+        System.out.println("FLOAT: Без приведения типа, с переполнением: " + (var7 + var8));
 
         double var9= Double.MAX_VALUE;
         double var10 = 1.7E308;
