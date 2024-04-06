@@ -1,5 +1,10 @@
 package ru.example;
 
+import ru.example.collections.ArrayListDemo;
+import ru.example.collections.HashMapDemo;
+import ru.example.collections.HashSetDemo;
+import ru.example.collections.TreeSetDemo;
+
 import java.util.List;
 
 public class Main {
@@ -172,5 +177,115 @@ public class Main {
         } else {
             System.out.println("Вердикт: Не стоит ехать в отпуск");
         }
+
+
+        //The code below is collection demonstration
+
+        System.out.println("\n-----'ArrayList' demo + 'For' cycle demo:-----\n");
+        System.out.println("Init ArrayList");
+        ArrayListDemo arrayListDemo = new ArrayListDemo();
+        arrayListDemo.addItemToArrayList("Item A");
+        arrayListDemo.addItemToArrayList("Item B");
+        arrayListDemo.addItemToArrayList("Item C");
+        System.out.println();
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.removeItemByValueFromArrayList("Item B");
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.removeItemByValueFromArrayList("Non-Existent Item D");
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.removeItemByIndexFromArrayList(0);
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.addItemToArrayList(0, "Item E");
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.addItemToArrayList(2, "Item E");
+        arrayListDemo.getAllItemsFromArrayList();
+        System.out.println();
+        arrayListDemo.removeAllItemsFromArrayList();
+        arrayListDemo.getAllItemsFromArrayList();
+
+
+        System.out.println("\n-----'HashSet' demo + 'While' cycle demo:-----\n");
+        System.out.println("Init HashSet");
+        HashSetDemo hashSetDemo = new HashSetDemo();
+        hashSetDemo.addItemToHashSet("Item A");
+        hashSetDemo.addItemToHashSet("Item B");
+        hashSetDemo.addItemToHashSet("Item C");
+        System.out.println();
+        hashSetDemo.getAllItemsFromHashSet();
+        System.out.println();
+        hashSetDemo.removeItemToHashSet("Item B");
+        hashSetDemo.getAllItemsFromHashSet();
+        System.out.println();
+        hashSetDemo.removeItemToHashSet("Non-Existent Item D");
+        hashSetDemo.getAllItemsFromHashSet();
+        System.out.println();
+        hashSetDemo.addItemToHashSet(null);
+        hashSetDemo.addItemToHashSet("E");
+        hashSetDemo.addItemToHashSet("E");
+        hashSetDemo.getAllItemsFromHashSet();
+        System.out.println();
+        hashSetDemo.checkItemInHashSet("E");
+        hashSetDemo.checkItemInHashSet("F");
+        System.out.println();
+        hashSetDemo.removeAllItemsFromHashSet();
+        hashSetDemo.getAllItemsFromHashSet();
+
+
+        System.out.println("\n-----'HashMap' demo + 'For-each' cycle demo:-----\n");
+        System.out.println("Init HashMap");
+        HashMapDemo hashMapDemo = new HashMapDemo();
+        hashMapDemo.addItemToHashMap(1,"Item A");
+        hashMapDemo.addItemToHashMap(2, "Item B");
+        hashMapDemo.addItemToHashMap(3, "Item C");
+        System.out.println();
+        hashMapDemo.getAllItemsFromHashMap();
+        System.out.println();
+        hashMapDemo.removeItemFromHashMap(2, "Item B");
+        hashMapDemo.getAllItemsFromHashMap();
+        System.out.println();
+        hashMapDemo.removeItemFromHashMap(3);
+        hashMapDemo.getAllItemsFromHashMap();
+        System.out.println();
+        hashMapDemo.addItemToHashMap(3, "Item E");
+        hashMapDemo.getAllItemsFromHashMap();
+        System.out.println();
+        hashMapDemo.checkItemByKeyInHashMap(1);
+        hashMapDemo.checkItemByKeyInHashMap(100);
+        hashMapDemo.checkItemByValueInHashMap("Item A");
+        hashMapDemo.checkItemByValueInHashMap("Item F");
+        System.out.println();
+        hashMapDemo.removeAllItemsFromHashMap();
+        hashMapDemo.getAllItemsFromHashMap();
+
+
+        System.out.println("\n-----'TreeSet' demo + 'Do-While' cycle demo:-----\n");
+        System.out.println("Init TreeSet");
+        TreeSetDemo treeSetDemo = new TreeSetDemo();
+        treeSetDemo.addItemToTreeSet("X");
+        treeSetDemo.addItemToTreeSet("H");
+        treeSetDemo.addItemToTreeSet("B");
+        treeSetDemo.addItemToTreeSet("A");
+        treeSetDemo.addItemToTreeSet("S");
+        System.out.println();
+        treeSetDemo.getAllItemsFromTreeSet();
+        System.out.println();
+        treeSetDemo.viewArrangedTreeSet();
+        System.out.println();
+        treeSetDemo.removeItemToTreeSet("B");
+        treeSetDemo.getAllItemsFromTreeSet();
+        System.out.println();
+        treeSetDemo.removeItemToTreeSet("Non-Existent Item D");
+        treeSetDemo.getAllItemsFromTreeSet();
+        System.out.println();
+        treeSetDemo.checkItemInTreeSet("X");
+        treeSetDemo.checkItemInTreeSet("C");
+        System.out.println();
+        treeSetDemo.removeAllItemsFromTreeSet();
+        treeSetDemo.getAllItemsFromTreeSet();
     }
 }
