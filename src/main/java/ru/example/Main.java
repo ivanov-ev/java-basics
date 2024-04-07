@@ -1,9 +1,6 @@
 package ru.example;
 
-import ru.example.collections.ArrayListDemo;
-import ru.example.collections.HashMapDemo;
-import ru.example.collections.HashSetDemo;
-import ru.example.collections.TreeSetDemo;
+import ru.example.collections.*;
 
 import java.util.List;
 
@@ -287,5 +284,23 @@ public class Main {
         System.out.println();
         treeSetDemo.removeAllItemsFromTreeSet();
         treeSetDemo.getAllItemsFromTreeSet();
+
+
+        System.out.println("\n-----'ArrayDeque' demo + 'For-each' cycle demo:-----\n");
+        System.out.println("Init ArrayDeque");
+        ArrayDequeDemo arrayDequeDemo = new ArrayDequeDemo();
+        arrayDequeDemo.addFirstItemToArrayDeque("Item B");
+        arrayDequeDemo.addFirstItemToArrayDeque("Item A");
+        arrayDequeDemo.addLastItemToArrayDeque("Item C");
+        System.out.println();
+        arrayDequeDemo.getAllItemsFromArrayDequeLifo();
+        System.out.println();
+        arrayDequeDemo.getAllItemsFromArrayDequeFifo();
+        arrayDequeDemo.pollFirstItemFromArrayDeque();
+        System.out.println();
+        arrayDequeDemo.getAllItemsFromArrayDequeFifo();
+        arrayDequeDemo.pollLastItemFromArrayDeque();
+        System.out.println();
+        arrayDequeDemo.getAllItemsFromArrayDequeFifo();
     }
 }
